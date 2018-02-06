@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="telephone=no" name="format-detection" />
+    <title>test</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, user-scalable=yes">
+</head>
+<body>
+    <h3>hello word</h3>
+    <span id="coords_1"></span>
+    <script type="text/javascript">
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }
+        function showPosition(position){
+            var lat = position.coords.latitude; //纬度
+            var lag = position.coords.longitude; //经度
+            document.getElementById("coords_1").innerHTML = lat+','+lag;
+        }
+    </script>
+</body>
+</html>
